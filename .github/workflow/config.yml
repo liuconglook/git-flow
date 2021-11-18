@@ -1,6 +1,7 @@
 name: GitHub Actions Config
 on: 
-  branches: [ master ]
+  push:
+    branches: [ master ]
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
