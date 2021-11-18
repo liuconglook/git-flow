@@ -1,0 +1,16 @@
+name: GitHub Actions 
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "触发事件：${{ github.event_name }}"
+      - run: echo "运行所在的机器：${{ runner.os }}"
+      - run: echo "分支名称：${{ github.ref }} ，及仓库名称：${{ github.repository }}"
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - run: echo "已克隆到目标仓库，测试你的代码"
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - run: echo "工作状态：${{ job.status }}."
