@@ -1,8 +1,12 @@
 name: GitHub Actions 
 on: [push]
+env:
+  ROOT_ENV: "ROOT ENV"
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
+    env:
+      COMMON_ENV: "COMMON ENV"
     steps:
       - run: echo "触发事件：${{ github.event_name }}"
       - run: echo "运行所在的机器：${{ runner.os }}"
@@ -14,3 +18,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "工作状态：${{ job.status }}."
+      - name: test env
+        run: echo "${{ env.ROOT_ENV }} ${{ env.COMMON_ENV }} ${{ env.NAME }}"
+        env:
+          NAME: "Hello World"
