@@ -22,3 +22,9 @@ jobs:
         run: echo "${{ env.ROOT_ENV }} ${{ env.COMMON_ENV }} ${{ env.NAME }}"
         env:
           NAME: "Hello World"
+      - name: test with
+        uses: ./.github/actions/my-action
+        with:
+          user_name: root
+          password: 123
+      
