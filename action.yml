@@ -1,0 +1,13 @@
+name: 'git-flow'
+description: 'git-flow and actions test'
+author: 'liucong'
+branding:
+  icon: 'git-branch'
+  color: 'gray-dark'
+inputs:
+  user_name:
+    description: 'The is username'
+    require: true
+  password:
+    description: 'The is password'
+    require: true
