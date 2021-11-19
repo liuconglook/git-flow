@@ -23,7 +23,7 @@ jobs:
         env:
           NAME: "Hello World"
       - name: test with
-        uses: ./
+        uses: ./.github/actions/action
         with:
           user_name: root
           password: 123
