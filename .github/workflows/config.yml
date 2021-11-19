@@ -23,7 +23,7 @@ jobs:
         env:
           NAME: "Hello World"
       - name: test with
-        uses: ./my-action
+        uses: ./
         with:
           user_name: root
           password: 123
