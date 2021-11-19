@@ -1,0 +1,8 @@
+on: push
+jobs:
+  my-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get env
+        run: echo "username: ${{ INPUT_USER_NAME }}"
+        run: echo "password: ${{ INPUT_PASSWORD }}"
